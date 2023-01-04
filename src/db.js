@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 mongoose.set("strictQuery", false);
-mongoose.connect("mongodb://127.0.0.1:27017/wetube", { useNewUrlParser: true });
+mongoose.connect(process.env.DB_URL, { useNewUrlParser: true });
 
 const db = mongoose.connection;
 
